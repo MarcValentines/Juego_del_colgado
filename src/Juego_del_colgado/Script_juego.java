@@ -48,13 +48,21 @@ public class Script_juego {
 		//parte donde se empiezan las rondas//
 		
 		while (true) {
+			//en caso de que las vidas lleguen a 0
+			if (vidasPorJug[index] == 0) {
+				break;
+			}
+			
+			for (int i = 0; i < numJugadores.length; i++) {
+				System.out.println("elección del jugador " + nombres[i]);
+				
+			}
+			
+			//en caso de que las vidas lleguen a 0
 			if (vidasPorJug[index] == 0) {
 				break;
 			}
 			index++;
-			for (int i = 0; i < numJugadores.length; i++) {
-				
-			}
 		}
 		
 		

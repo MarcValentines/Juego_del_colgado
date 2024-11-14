@@ -17,6 +17,7 @@ public class Script_juego {
 		System.out.println("inserta la palabra secreta = ");
 		palabraSecreta += entradaTec.nextLine().toLowerCase();
 		
+		//numero de jugadores en la partida
 		int[] numJugadores;
 		System.out.println("inserte el numero de jugadores que quieras (mínimo 2) = ");
 		int numJds = entradaTec.nextInt();
@@ -26,12 +27,22 @@ public class Script_juego {
 		}
 		numJugadores = new int[numJds];
 		
+		//vidas de los jugadores
 		int[] vidasPorJug;
 		vidasPorJug = new int[numJds];
 		int index = 0;
 		
 		for (int i = 0; i < vidasPorJug.length; i++) {
 			vidasPorJug[i] = vidasPorJug[i] + 6;
+		}
+		
+		//nombres de los jugadores//
+		String[] nombres;
+		nombres = new String[numJds];
+		
+		for (int i = 0; i < nombres.length; i++) {
+			System.out.println("Inserta el nombre del jugador = ");
+			nombres[i] = entradaTec.next();
 		}
 		
 		//parte donde se empiezan las rondas//

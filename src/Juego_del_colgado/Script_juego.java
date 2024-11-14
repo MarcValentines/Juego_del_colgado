@@ -8,6 +8,12 @@ public class Script_juego {
 		
 		String palabraSecreta = "";
 		
+		System.out.println("--REGLAS DEL JUEGO--");
+		System.out.println("El adiministrador va a insertar la palabra secreta");
+		System.out.println("Se van a pedir el número de jugadores que van a jugar");
+		System.out.println("cada jugador va a tener 6 vidas");
+		System.out.println("si un jugador se queda sin vidas se acaba el juego");
+		
 		System.out.println("inserta la palabra secreta = ");
 		palabraSecreta += entradaTec.nextLine().toLowerCase();
 		

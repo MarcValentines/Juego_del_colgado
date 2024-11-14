@@ -11,6 +11,10 @@ public class Script_juego {
 		System.out.println("inserta la palabra secreta = ");
 		palabraSecreta += entradaTec.nextLine().toLowerCase();
 		
+		int[] numJugadores;
+		System.out.println("inserte el numero de jugadores que quieras (mínimo 2) = ");
+		int numJds = entradaTec.nextInt();
+		numJugadores = new int[numJds];
 		
 	}
 

@@ -14,6 +14,10 @@ public class Script_juego {
 		int[] numJugadores;
 		System.out.println("inserte el numero de jugadores que quieras (mínimo 2) = ");
 		int numJds = entradaTec.nextInt();
+		while (numJds < 2) {
+			System.out.println("vuelve a insertar el numero de jugadores = ");
+			numJds = entradaTec.nextInt();
+		}
 		numJugadores = new int[numJds];
 		
 	}

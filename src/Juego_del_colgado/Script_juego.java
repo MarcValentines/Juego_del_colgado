@@ -28,10 +28,24 @@ public class Script_juego {
 		
 		int[] vidasPorJug;
 		vidasPorJug = new int[numJds];
+		int index = 0;
 		
 		for (int i = 0; i < vidasPorJug.length; i++) {
 			vidasPorJug[i] = vidasPorJug[i] + 6;
 		}
+		
+		//parte donde se empiezan las rondas//
+		
+		while (true) {
+			if (vidasPorJug[index] == 0) {
+				break;
+			}
+			index++;
+			for (int i = 0; i < numJugadores.length; i++) {
+				
+			}
+		}
+		
 		
 	}
 

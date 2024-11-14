@@ -49,13 +49,20 @@ public class Script_juego {
 		
 		while (true) {
 			//en caso de que las vidas lleguen a 0
-			if (vidasPorJug[index] == 0) {
+			if (vidasPorJug[index] != 0) {
 				break;
 			}
 			
 			for (int i = 0; i < numJugadores.length; i++) {
 				System.out.println("elección del jugador " + nombres[i]);
+				System.out.println("introduce una letra para ver si se encuentra en la palabra = ");
+				char letra = entradaTec.next().toLowerCase().charAt(0);
 				
+				for (int j = 0; j < palabraSecreta.length(); j++) {
+					if (palabraSecreta.charAt(j) == letra) {
+						
+					}
+				}
 			}
 			
 			//en caso de que las vidas lleguen a 0

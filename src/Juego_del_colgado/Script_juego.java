@@ -49,7 +49,7 @@ public class Script_juego {
 		
 		while (true) {
 			//en caso de que las vidas lleguen a 0
-			if (vidasPorJug[index] != 0) {
+			if (vidasPorJug[index] == 0) {
 				break;
 			}
 			
@@ -60,8 +60,12 @@ public class Script_juego {
 				
 				for (int j = 0; j < palabraSecreta.length(); j++) {
 					if (palabraSecreta.charAt(j) == letra) {
+						System.out.println(letra);
 						
+					}else {
+						System.out.println("_");
 					}
+					
 				}
 			}
 			

@@ -20,6 +20,13 @@ public class Script_juego {
 		}
 		numJugadores = new int[numJds];
 		
+		int[] vidasPorJug;
+		vidasPorJug = new int[numJds];
+		
+		for (int i = 0; i < vidasPorJug.length; i++) {
+			vidasPorJug[i] = vidasPorJug[i] + 6;
+		}
+		
 	}
 
 }

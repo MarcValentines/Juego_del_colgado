@@ -69,13 +69,7 @@ public class Script_juego {
 				System.out.println("introduce una letra para ver si se encuentra en la palabra = ");
 				char letra = entradaTec.next().toLowerCase().charAt(0);
 				
-				for (int j = 0; j < palabraSecreta.length(); j++) {
-					if (palabraSecreta.charAt(j) == letra) {
-						System.out.println(letra);
-						
-					}else {
-						System.out.println("_");
-					}
+				
 					
 				}
 			}

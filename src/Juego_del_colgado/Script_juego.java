@@ -84,8 +84,18 @@ public class Script_juego {
 						letrasPrint[j] = letras[j];
 						System.out.println(Arrays.toString(letrasPrint));
 					}
-					
 				}
+				
+				//en caso de que se encuentre la palabra secreta se termina el juego
+				if (Arrays.equals(letras, letrasPrint)) {
+					System.out.println("felicidades, has encontrado la palabra secreta!!");
+					palabraEncontrada = true;
+					break;
+				}
+			}
+			//terminar el bucle si se encientra la palabra
+			if (palabraEncontrada) {
+				break;
 			}
 			
 			//en caso de que las vidas lleguen a 0
@@ -93,6 +103,8 @@ public class Script_juego {
 				break;
 			}
 			index++;
+			
+			
 		}
 		
 		

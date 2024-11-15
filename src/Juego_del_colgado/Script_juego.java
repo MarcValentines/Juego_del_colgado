@@ -1,4 +1,5 @@
 package Juego_del_colgado;
+import java.util.Arrays;
 import java.util.Scanner;
 public class Script_juego {
 
@@ -7,6 +8,8 @@ public class Script_juego {
 		Scanner entradaTec = new Scanner(System.in);
 		
 		String palabraSecreta = "";
+		
+		boolean palabraEncontrada = false;
 		
 		System.out.println("--REGLAS DEL JUEGO--");
 		System.out.println("El adiministrador va a insertar la palabra secreta");
@@ -78,7 +81,8 @@ public class Script_juego {
 				
 				for (int j = 0; j < letras.length; j++) {
 					if (letras[j].equals(Character.toString(letra))) { //tenemos que convertir el caracter a un string para poder compararlos
-						
+						letrasPrint[j] = letras[j];
+						System.out.println(Arrays.toString(letrasPrint));
 					}
 					
 				}

@@ -36,7 +36,7 @@ public class Script_juego {
 			vidasPorJug[i] = vidasPorJug[i] + 6;
 		}
 		
-		//nombres de los jugadores//
+		//nombres de los jugadores
 		String[] nombres;
 		nombres = new String[numJds];
 		
@@ -56,8 +56,15 @@ public class Script_juego {
 			letras[i] = letraEsp + "";
 		}
 		
+		//las letras que se van a mostrar en pantalla siempre que se termine de escribir la letra
+		String[] letrasPrint;
+		letrasPrint = new String[letras.length];
 		
-		//parte donde se empiezan las rondas//
+		for (int i = 0; i < letrasPrint.length; i++) {
+			letrasPrint[i] = "_"; //mantener que tengan un _ por defecto
+		}
+		
+		//parte donde se empiezan las rondas
 		while (true) {
 			//en caso de que las vidas lleguen a 0
 			if (vidasPorJug[index] == 0) {
@@ -69,7 +76,10 @@ public class Script_juego {
 				System.out.println("introduce una letra para ver si se encuentra en la palabra = ");
 				char letra = entradaTec.next().toLowerCase().charAt(0);
 				
-				
+				for (int j = 0; j < letras.length; j++) {
+					if (letras[j].equals(Character.toString(letra))) { //tenemos que convertir el caracter a un string para poder compararlos
+						
+					}
 					
 				}
 			}

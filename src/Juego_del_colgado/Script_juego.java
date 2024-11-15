@@ -45,8 +45,19 @@ public class Script_juego {
 			nombres[i] = entradaTec.next();
 		}
 		
-		//parte donde se empiezan las rondas//
 		
+		
+		//guardar las letras de la palabra clave dentro de un array
+		String[] letras;
+		letras = new String[palabraSecreta.length()];
+		
+		for (int i = 0; i < letras.length; i++) {
+			char letraEsp = palabraSecreta.charAt(i);
+			letras[i] = letraEsp + "";
+		}
+		
+		
+		//parte donde se empiezan las rondas//
 		while (true) {
 			//en caso de que las vidas lleguen a 0
 			if (vidasPorJug[index] == 0) {

@@ -1,6 +1,5 @@
 package Juego_del_colgado;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.Scanner;
 public class Script_juego {
 
@@ -107,6 +106,7 @@ public class Script_juego {
 				if (aciertos == 0) {
 					System.out.println("no se he encontrado la letra dentro de la palabra :(");
 					vidasPorJug[i]--;
+					System.out.println(Arrays.toString(letrasPrint));
 					System.out.println("El jugador " + nombres[i] + " tiene " + vidasPorJug[i] + " vidas");
 					System.out.println("___________________________________________________________________");
 				}
@@ -122,6 +122,20 @@ public class Script_juego {
 			}
 			//terminar el bucle si se encientra la palabra
 			if (palabraEncontrada) {
+				break;
+			}
+			
+			//en caso de que las vidas lleguen a 0
+			for (int i = 0; i < vidasPorJug.length; i++) {
+				if (vidasPorJug[i] == 0) {
+					System.out.println("_______________________________________________________");
+					System.out.println("Se ha llegado a las 0 vidas, el juego termina");
+					System.out.println("|| ...EXITING... ||");
+					index--;
+					break;
+				}
+			}
+			if (index == 0) {
 				break;
 			}
 			

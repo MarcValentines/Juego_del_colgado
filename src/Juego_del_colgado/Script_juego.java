@@ -88,6 +88,7 @@ public class Script_juego {
 					}
 					if (aciertos < letras.length) {
 						System.out.println("no se he encontrado la letra dentro de la palabra :(");
+						vidasPorJug[i]--;
 					}
 				}
 				
@@ -108,7 +109,7 @@ public class Script_juego {
 				break;
 			}
 			index++;
-			if (index > numJugadores.length) { //para que el index no supere el número de jugadores
+			if (index > vidasPorJug.length) { //para que el index no supere el número de jugadores
 				index = 0;
 			}
 			

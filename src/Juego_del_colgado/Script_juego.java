@@ -74,15 +74,20 @@ public class Script_juego {
 				break;
 			}
 			
+			//turno del jugador en el índex i del array numJugadores
 			for (int i = 0; i < numJugadores.length; i++) {
 				System.out.println("elección del jugador " + nombres[i]);
 				System.out.println("introduce una letra para ver si se encuentra en la palabra = ");
 				char letra = entradaTec.next().toLowerCase().charAt(0);
+				int aciertos = 0;
 				
 				for (int j = 0; j < letras.length; j++) {
 					if (letras[j].equals(Character.toString(letra))) { //tenemos que convertir el caracter a un string para poder compararlos
 						letrasPrint[j] = letras[j];
 						System.out.println(Arrays.toString(letrasPrint));
+					}
+					if (aciertos < letras.length) {
+						System.out.println("no se he encontrado la letra dentro de la palabra :(");
 					}
 				}
 				
@@ -103,6 +108,10 @@ public class Script_juego {
 				break;
 			}
 			index++;
+			if (index > numJugadores.length) { //para que el index no supere el número de jugadores
+				index = 0;
+			}
+			
 			
 			
 		}

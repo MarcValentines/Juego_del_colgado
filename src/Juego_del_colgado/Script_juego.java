@@ -1,5 +1,6 @@
 package Juego_del_colgado;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Scanner;
 public class Script_juego {
 
@@ -16,6 +17,7 @@ public class Script_juego {
 		System.out.println("Se van a pedir el número de jugadores que van a jugar");
 		System.out.println("cada jugador va a tener 6 vidas");
 		System.out.println("si un jugador se queda sin vidas se acaba el juego");
+		System.out.println("_______________________________________________________");
 		
 		System.out.println("inserta la palabra secreta = ");
 		palabraSecreta += entradaTec.nextLine().toLowerCase();
@@ -33,7 +35,7 @@ public class Script_juego {
 		//vidas de los jugadores
 		int[] vidasPorJug;
 		vidasPorJug = new int[numJds];
-		int index = 0;
+		int index = 1;
 		
 		for (int i = 0; i < vidasPorJug.length; i++) {
 			vidasPorJug[i] = vidasPorJug[i] + 6;
@@ -44,6 +46,7 @@ public class Script_juego {
 		nombres = new String[numJds];
 		
 		for (int i = 0; i < nombres.length; i++) {
+			System.out.println("_______________________________________________________");
 			System.out.println("Inserta el nombre del jugador = ");
 			nombres[i] = entradaTec.next();
 		}
@@ -70,12 +73,22 @@ public class Script_juego {
 		//parte donde se empiezan las rondas
 		while (true) {
 			//en caso de que las vidas lleguen a 0
-			if (vidasPorJug[index] == 0) {
+			for (int i = 0; i < vidasPorJug.length; i++) {
+				if (vidasPorJug[i] == 0) {
+					System.out.println("_______________________________________________________");
+					System.out.println("Se ha llegado a las 0 vidas, el juego termina");
+					System.out.println("|| ...EXITING... ||");
+					index--;
+					break;
+				}
+			}
+			if (index == 0) {
 				break;
 			}
 			
 			//turno del jugador en el índex i del array numJugadores
 			for (int i = 0; i < numJugadores.length; i++) {
+				System.out.println("______________________________________________________________");
 				System.out.println("elección del jugador " + nombres[i]);
 				System.out.println("introduce una letra para ver si se encuentra en la palabra = ");
 				char letra = entradaTec.next().toLowerCase().charAt(0);
@@ -95,22 +108,20 @@ public class Script_juego {
 					System.out.println("no se he encontrado la letra dentro de la palabra :(");
 					vidasPorJug[i]--;
 					System.out.println("El jugador " + nombres[i] + " tiene " + vidasPorJug[i] + " vidas");
+					System.out.println("___________________________________________________________________");
 				}
 				
 				//en caso de que se encuentre la palabra secreta se termina el juego
 				if (Arrays.equals(letras, letrasPrint)) {
+					System.out.println("_______________________________________________________");
 					System.out.println("felicidades, has encontrado la palabra secreta!!");
+					System.out.println("|| ...Exiting... ||");
 					palabraEncontrada = true;
 					break;
 				}
 			}
 			//terminar el bucle si se encientra la palabra
 			if (palabraEncontrada) {
-				break;
-			}
-			
-			//en caso de que las vidas lleguen a 0
-			if (vidasPorJug[index] == 0) {
 				break;
 			}
 			

@@ -81,15 +81,20 @@ public class Script_juego {
 				char letra = entradaTec.next().toLowerCase().charAt(0);
 				int aciertos = 0;
 				
+				//zona de acierto de letra
 				for (int j = 0; j < letras.length; j++) {
 					if (letras[j].equals(Character.toString(letra))) { //tenemos que convertir el caracter a un string para poder compararlos
 						letrasPrint[j] = letras[j];
 						System.out.println(Arrays.toString(letrasPrint));
+						aciertos++;
 					}
-					if (aciertos < letras.length) {
-						System.out.println("no se he encontrado la letra dentro de la palabra :(");
-						vidasPorJug[i]--;
-					}
+				//zona del fallo en la letra
+				}
+				
+				if (aciertos == 0) {
+					System.out.println("no se he encontrado la letra dentro de la palabra :(");
+					vidasPorJug[i]--;
+					System.out.println("El jugador " + nombres[i] + " tiene " + vidasPorJug[i] + " vidas");
 				}
 				
 				//en caso de que se encuentre la palabra secreta se termina el juego
@@ -108,12 +113,6 @@ public class Script_juego {
 			if (vidasPorJug[index] == 0) {
 				break;
 			}
-			index++;
-			if (index > vidasPorJug.length) { //para que el index no supere el número de jugadores
-				index = 0;
-			}
-			
-			
 			
 		}
 		

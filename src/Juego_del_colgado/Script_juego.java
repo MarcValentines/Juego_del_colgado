@@ -1,5 +1,7 @@
 package Juego_del_colgado;
-import java.util.Arrays;
+import java.util.Arrays; // Java sirve para importar la clase Arrays 
+//de la biblioteca estándar de Java, la cual contiene métodos útiles 
+//para trabajar con arrays
 import java.util.Scanner;
 public class Script_juego {
 

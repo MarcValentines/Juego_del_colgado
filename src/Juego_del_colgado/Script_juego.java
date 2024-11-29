@@ -27,9 +27,9 @@ public class Script_juego {
 		
 		System.out.println("Cuantas rondas vas a querer jugar? "); //numero de rondas (las veces que se va a elegir una palabra secreta nueva)
 		int rondas = entradaTec.nextInt(); 
-		entradaTec.nextLine();
 		
 		for (int x = 0; x < rondas; x++) {
+			entradaTec.nextLine();
 			
 			//mostrar rondas por pantalla
 			int numron = x + 1;
